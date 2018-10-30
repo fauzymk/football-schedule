@@ -14,11 +14,13 @@ class NextMatchViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val home = view.findViewById<TextView>(R.id.home_team)
     private val away = view.findViewById<TextView>(R.id.away_team)
     private val score = view.findViewById<TextView>(R.id.score)
+    private val date = view.findViewById<TextView>(R.id.date)
 
     fun bindItem(event: Event) {
         home.text = event.home_team
         away.text = event.away_team
         score.text = "${event.home_score ?: "0"} : ${event.away_score ?: "0"}"
+        date.text = event.date
     }
 }
 

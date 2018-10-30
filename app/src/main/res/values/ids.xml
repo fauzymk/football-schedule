@@ -3,4 +3,6 @@
     <item name="home_team" type="id"/>
     <item name="away_team" type="id"/>
     <item name="score" type="id"/>
+    <item name="progress_dialog" type="id"/>
+    <item name="date" type="id"/>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.fauzy.footballschedule.api
 
 import com.example.fauzy.footballschedule.model.EventResponse
+import com.example.fauzy.footballschedule.model.TeamResponse
 import kotlinx.coroutines.experimental.Deferred
 import retrofit2.http.*
 
@@ -12,5 +13,5 @@ interface EventApi {
     fun getNextEvents(@Query("id") id: String?): Deferred<EventResponse>
 
     @GET("api/v1/json/1/lookupteam.php")
-    fun getTeamDetails(@Query("id") id: String)
+    fun getTeamDetails(@Query("id") id: String): Deferred<TeamResponse>
 }

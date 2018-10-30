@@ -5,6 +5,10 @@ import com.example.fauzy.footballschedule.api.EventApi
 import com.example.fauzy.footballschedule.model.Event
 import com.example.fauzy.footballschedule.model.EventResponse
 import com.example.fauzy.footballschedule.view.MatchView
+import kotlinx.coroutines.experimental.DefaultDispatcher
+import kotlinx.coroutines.experimental.Dispatchers
+import kotlinx.coroutines.experimental.GlobalScope
+import kotlinx.coroutines.experimental.android.Main
 import kotlinx.coroutines.experimental.launch
 import java.lang.Exception
 
@@ -14,7 +18,7 @@ class LastMatchPresenter(private val view: MatchView,
     fun getEventList(id: String?) {
         view.showLoading()
 
-        launch {
+        GlobalScope.launch(Dispatchers.Main) {
             val requestEvent = apiClient.getPastEvents(id)
 
             try {
@@ -27,6 +31,7 @@ class LastMatchPresenter(private val view: MatchView,
                 view.hideLoading()
             } catch (e: Exception) {
                 Log.d("ERROR", "Something went wrong di lastmatch ${e.stackTrace}")
+                view.showError(e)
             }
 
         }

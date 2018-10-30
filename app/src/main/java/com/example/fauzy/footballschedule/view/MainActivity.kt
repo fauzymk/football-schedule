@@ -12,6 +12,8 @@ import com.example.fauzy.footballschedule.R
 
 import kotlinx.android.synthetic.main.activity_main.*
 
+const val EVENT_DATA = "EVENT_DATA"
+
 class MainActivity : AppCompatActivity() {
 
     /**
@@ -52,7 +54,7 @@ class MainActivity : AppCompatActivity() {
             when (position) {
                 0 -> return LastMatchFragment.newInstance()
                 1 -> return NextMatchFragment.newInstance()
-                else -> return null
+                else -> return LastMatchFragment.newInstance()
             }
         }
 

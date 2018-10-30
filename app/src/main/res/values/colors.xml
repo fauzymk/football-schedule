@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#212524</color>
-    <color name="colorPrimaryDark">#111211</color>
-    <color name="colorAccent">#e1d423</color>
+    <color name="colorPrimary">#03a9f4</color>
+    <color name="colorPrimaryDark">#0288D1</color>
+    <color name="colorAccent">#FFC107</color>
+    <color name="redCard">#d2062f</color>
+    <color name="yellowCard">#e5e902</color>
 </resources>
